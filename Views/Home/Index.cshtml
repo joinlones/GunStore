@@ -1,27 +1,9 @@
-﻿@model IEnumerable<GunStore.Models.Gun>
-
-@{
-    ViewData["Title"] = "Список Оружия";
+﻿@{
+    ViewData["Title"] = "Главная Страница";
 }
 
-<h1>Список Оружия</h1>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Название</th>
-            <th>Описание</th>
-            <th>Цена</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var gun in Model)
-        {
-            <tr>
-                <td>@gun.Name</td>
-                <td>@gun.Description</td>
-                <td>@gun.Price</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="text-center">
+    <h1>Добро пожаловать в GunStore!</h1>
+    <p>Это ваша главная страница.</p>
+    <a asp-controller="Guns" asp-action="Index" class="btn btn-primary">Guns</a>
+</div>
