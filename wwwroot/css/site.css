@@ -1,0 +1,46 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url('/images/FArms.jpg'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Обеспечивает полное покрытие фоном */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    background-position: center; /* Центрирует изображение */
+}
+
+.bg-light {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+}
+
+.table {
+    margin-bottom: 0; /* Убираем отступ снизу для таблицы */
+}
+
+.container {
+    position: relative; /* Убедитесь, что контейнер имеет относительное позиционирование */
+    z-index: 10; /* Увеличиваем z-index, чтобы контейнер был поверх фона */
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    padding: 20px 0; /* Отступы */
+    position: relative; /* Позиционирование элемента */
+    z-index: 10; /* Увеличиваем z-index */
+}
