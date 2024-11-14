@@ -4,37 +4,37 @@
     ViewData["Title"] = "Список Оружия";
 }
 
-<div class="container mt-4">
-<h1>Список Оружия</h1>
+<div class="container mt-4" style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 8px;">
+    <h1>Список Оружия</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Добавить новое оружие</a>
-</p>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Добавить новое оружие</a>
+    </p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Название</th>
-            <th>Производитель</th>
-            <th>Цена</th>
-            <th>Описание</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var gun in Model)
-        {
+    <table class="table" style="background-color: white; opacity: 0.9;">
+        <thead>
             <tr>
-                <td>@gun.Name</td>
-                <td>@gun.Manufacturer</td>
-                <td>@gun.Price.ToString("C")</td>
-                <td>@gun.Description</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@gun.Id" class="btn btn-warning">Редактировать</a>
-                    <a asp-action="Delete" asp-route-id="@gun.Id" class="btn btn-danger">Удалить</a>
-                </td>
+                <th>Название</th>
+                <th>Производитель</th>
+                <th>Цена</th>
+                <th>Описание</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var gun in Model)
+            {
+                <tr>
+                    <td>@gun.Name</td>
+                    <td>@gun.Manufacturer</td>
+                    <td>@gun.Price.ToString("C")</td>
+                    <td>@gun.Description</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@gun.Id" class="btn btn-warning">Редактировать</a>
+                        <a asp-action="Delete" asp-route-id="@gun.Id" class="btn btn-danger">Удалить</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

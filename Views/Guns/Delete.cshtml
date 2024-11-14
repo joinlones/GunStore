@@ -1,0 +1,20 @@
+﻿@model GunStore.Models.Gun
+
+@{
+    ViewData["Title"] = "Удалить Оружие";
+}
+
+<h1>Удалить Оружие</h1>
+
+<h3>Вы уверены, что хотите удалить это оружие?</h3>
+<div>
+    <h4>@Model.Name</h4>
+    <p>Производитель: @Model.Manufacturer</p>
+    <p>Цена: @Model.Price.ToString("C")</p>
+    <p>Описание: @Model.Description</p>
+</div>
+
+<form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+    <input type="submit" value="Удалить" class="btn btn-danger" />
+    <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+</form>
