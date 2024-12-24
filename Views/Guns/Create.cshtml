@@ -1,29 +1,31 @@
 ﻿@model GunStore.Models.Gun
 
-<h1>Добавить Оружие</h1>
+<div class="container bg-light p-4 rounded">
+    <h1>Добавить Оружие</h1>
 
-<form asp-action="Create">
-    <div class="form-group">
-        <label asp-for="Name">Название</label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Manufacturer">Производитель</label>
-        <input asp-for="Manufacturer" class="form-control" />
-        <span asp-validation-for="Manufacturer" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Price">Цена</label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Description">Описание</label>
-        <textarea asp-for="Description" class="form-control"></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Добавить</button>
-</form>
+    <form asp-action="Create">
+        <div class="form-group">
+            <label asp-for="Name">Название</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Manufacturer">Производитель</label>
+            <input asp-for="Manufacturer" class="form-control" />
+            <span asp-validation-for="Manufacturer" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price">Цена</label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Описание</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
 
-<a asp-action="Index" class="btn btn-secondary mt-3">Назад</a> <!-- Добавлено: кнопка назад -->
+    <a asp-action="Index" class="btn btn-secondary mt-3">Назад</a> <!-- Добавлено: кнопка назад -->
+</div>
